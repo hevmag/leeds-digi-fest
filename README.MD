@@ -391,3 +391,40 @@ _Optional - set interval not exact to the second, flight flunctations - compare 
         },1000)
 
     }
+
+## Extra - add best score
+
+**Add lowest score in html**
+
+    <div class="timer" id="timer"></div>
+        <div class="score" id="score">Lowest score 999</div>
+    <div class="container">
+
+** add CSS **
+
+    .score {
+    position: absolute;
+    top:2rem;
+    left: 60%;
+    font-size: 3rem;
+    color: yellow;
+    font-weight: bold;
+    }
+
+**Lowest score variable and target element**
+
+        const scoreElement = document.getElementById('score');
+
+        let lowestScore = 999;
+
+**Inside render new quote/if statement already there**
+
+    if(correct) {
+        const currentScore = Number(timerElement.innerText)
+
+        if(currentScore < lowestScore){
+        bestScore = currentScore;
+        scoreElement.innerText = `Best score ${bestScore}`
+        }
+        renderNewQuote()
+    }
