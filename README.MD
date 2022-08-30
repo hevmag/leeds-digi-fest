@@ -248,9 +248,9 @@ _Can start typing to show it turns green, but everything else goes red - missing
 
 **Add check for null/undefined - change if to else if**
 
-quoteInputElement.addEventListener('input', ()=>{
-const arrayQuote = quoteDisplayElement.querySelectorAll('span');
-const arrayValue = quoteInputElement.value.split('');
+    quoteInputElement.addEventListener('input', ()=>{
+    const arrayQuote = quoteDisplayElement.querySelectorAll('span');
+    const arrayValue = quoteInputElement.value.split('');
 
     arrayQuote.forEach((characterSpan, index)=>{
         const character = arrayValue[index]
